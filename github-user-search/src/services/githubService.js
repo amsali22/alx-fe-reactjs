@@ -29,7 +29,7 @@ import axios from 'axios'
             };
 
         } catch(err) {
-        console.log("Error Msg:", err)
+        
         throw err;
     }
     };
