@@ -97,6 +97,20 @@ const Search = () => {
                     <p>Location: {userData.location}</p>
                     <p>Repositories: {userData.public_repos}</p>
                     <img src={userData.avatar_url} alt={userData.name} width="100" className="mt-2 rounded-full" />
+                    {userData.repos && (
+                        <div className="mt-4">
+                            <h4 className="text-lg font-bold">Repositories:</h4>
+                            <ul>
+                                {userData.repos.map((repo) => (
+                                    <li key={repo.id} className="mt-2">
+                                        <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                                            {repo.name}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
                 </div>
             )}
         </div>
