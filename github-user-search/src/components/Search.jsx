@@ -20,7 +20,7 @@ const Search = () => {
         console.log(data);
         setError(null)
      } catch (error) {
-        setError('User not found');
+        setError('Looks like we cant find the user');
         setUserData(null);
      }
     };
