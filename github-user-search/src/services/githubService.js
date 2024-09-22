@@ -29,7 +29,6 @@ import axios from 'axios'
             };
 
         } catch(err) {
-        
         throw err;
     }
     };
